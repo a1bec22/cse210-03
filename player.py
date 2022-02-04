@@ -1,10 +1,10 @@
 class Player():
     def __init__(self):
-        self.chosen_letters = []
+        self._chosen_letters = []
 
-    def guess_letter(self):
-        guess = str(input("Guess your letter a-z! ")).lower()
-        while len(guess) != 1 or guess in self.chosen_letters:
-            guess = str(input("Guess your letter a-z! "))
-        self.chosen_letters.append(guess.lower())  
-        return guess
+    def _guess_letter(self):
+        _guess = str(input("Guess your letter A-Z! ")).lower()
+        while len(_guess) != 1 or _guess in self._chosen_letters:
+            _guess = str(input("Guess your letter A-Z! "))
+        self._chosen_letters.append(_guess.lower())  
+        return _guess
