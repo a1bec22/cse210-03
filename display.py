@@ -1,10 +1,10 @@
 class Display():
 
     def __init__(self):
+        pass
+        # self._tries = 4
 
-        self._tries = 4
-
-    def display_parachute(self):
+    def display_parachute(self, tries):
         stages = [  # #dead
             """
                     
@@ -51,4 +51,4 @@ class Display():
                      / \\
             """
         ]
-        return stages[self._tries]
+        return stages[tries]
