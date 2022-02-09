@@ -15,7 +15,7 @@ class word_gen():
         Args: self (word_gen): an instance of word_gen.
         """
 
-        self._word_list = ["skateboard", "book", "rain", "key", "worm",
+        self.__word_list = ["skateboard", "book", "rain", "key", "worm",
                            "chimney", "coin", "dog", "starfish", "cupcake"]
 
     def generate_word(self):
@@ -28,6 +28,6 @@ class word_gen():
             string: A random word from the word list.
         """
 
-        _game_word = random.choice(self._word_list)
+        __game_word = random.choice(self.__word_list)
 
-        return _game_word
+        return __game_word
