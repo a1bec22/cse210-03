@@ -23,10 +23,8 @@ class Conductor():
         gen = word_gen()
         self._word = gen.generate_word()
         display = Display()
-        # display.display_parachute()
         while self.play:
-
-            display.display_parachute()
+            print(display.display_parachute(self._tries))
             self.get_guess()
             self.do_guess_logic()
         self.game_end()
@@ -78,7 +76,7 @@ class Conductor():
                     self._word_completion = self._word
             else:
                 print("Not a valid guess.")
-            print(display.display_parachute())
+            print(display.display_parachute(self._tries))
             print(self._word_completion)
             print("\n")
 
