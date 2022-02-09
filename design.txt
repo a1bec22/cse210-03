@@ -17,7 +17,7 @@ Hierarchy
 
 Assignments/What do these classes need?
     Conductor
-        needs to import data from word-gen and player
+        needs to import data from word-gen and player, and import Display class ( this may change if we can find a way for Display class to output everything instead.)
         keeps word constant for gameplay duration
         determines if a guess is right or wrong
         tracks how many guesses player has left

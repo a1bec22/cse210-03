@@ -23,8 +23,6 @@ class Player():
         Returns:
             string: A letter from the player.
         """
-        _guess = str(input("Guess your letter A-Z! ")).lower()
-        while len(_guess) != 1 or _guess in self._chosen_letters:
-            _guess = str(input("Guess your letter A-Z! "))
-        self._chosen_letters.append(_guess.lower())
-        return _guess
+        self._guess = str(input("Guess your letter A-Z! ")).lower()
+        self._chosen_letters.append(self._guess.lower())
+        return self._guess
