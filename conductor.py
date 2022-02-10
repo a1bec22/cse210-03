@@ -1,11 +1,13 @@
-from word_gen import word_gen
+from word_gen import WordGen
 from player import Player
 from display import Display
 
-class Conductor():
+class Conductor:
 
     def __init__(self):
-
+        """
+        This initializes an instance of the Conductor (self)
+        """
         guessed = False
         self.__guessed = guessed
         self.__guessed_letters = []
@@ -13,7 +15,11 @@ class Conductor():
         self.__tries = 4        
 
     def start(self):
-        gen = word_gen()
+        """
+        This starts the game
+        Args: self (Conductor)
+        """
+        gen = WordGen()
         self.__word = gen.generate_word()
         self.__word_completion = "_" * len(self.__word)
         self.__play = True
@@ -30,6 +36,9 @@ class Conductor():
     def get_guess(self):
         """
         This function retrieves the player's guess (a letter) as a result of the Player input
+        Args: self (Conductor)
+        Returns:
+            string: A letter from the player.
         """
         player = Player()
         self.__guess = player.guess_letter()
@@ -38,6 +47,7 @@ class Conductor():
     def do_guess_logic(self):
         """
         This function  receives necessary data to process
+        Args: self (Conductor)
         """
         player = Player()
         display = Display()
@@ -80,6 +90,7 @@ class Conductor():
     def game_end(self):
         """
         This method determines whether to display the win message, or loss message, based on the "guessed" status. Then, it asks player if a new round would be desired.
+        Args: self (Conductor)
         """
         
         if self.__guessed == True:
