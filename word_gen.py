@@ -11,7 +11,7 @@ class WordGen:
     """
 
     def __init__(self):
-        """ Provides database of words for the word generator
+        """ Provides database of words for the word generator accessing privately from the word list file
 
         Args: self (word_gen): an instance of word_gen.
         """
