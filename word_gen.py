@@ -16,7 +16,7 @@ class WordGen:
         """
 
         self.__word_list = ["skateboard", "book", "rain", "key", "worm",
-                           "chimney", "coin", "dog", "starfish", "cupcake"]
+                            "chimney", "coin", "dog", "starfish", "cupcake"]
 
     def generate_word(self):
         """Selects a random word to be used for gameplay
