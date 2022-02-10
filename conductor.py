@@ -1,8 +1,8 @@
-from word_gen import word_gen
+from word_gen import WordGen
 from player import Player
 from display import Display
 
-class Conductor():
+class Conductor:
 
     def __init__(self):
 
@@ -13,7 +13,7 @@ class Conductor():
         self.__tries = 4        
 
     def start(self):
-        gen = word_gen()
+        gen = WordGen()
         self.__word = gen.generate_word()
         self.__word_completion = "_" * len(self.__word)
         self.__play = True

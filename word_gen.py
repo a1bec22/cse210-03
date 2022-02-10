@@ -1,7 +1,7 @@
 import random
 
 
-class word_gen():
+class WordGen:
     """A class that generates a random word from an existing list for gameplay.
 
     Attributes:
