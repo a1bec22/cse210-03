@@ -1,3 +1,6 @@
+""" This is the list of words which will be imported ramdonly by the word generator"""
+
+
 word_list = [
     'wares',
     'soup',
