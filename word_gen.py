@@ -1,4 +1,5 @@
 import random
+from word_list import word_list
 
 
 class WordGen:
@@ -14,9 +15,8 @@ class WordGen:
 
         Args: self (word_gen): an instance of word_gen.
         """
-
-        self.__word_list = ["skateboard", "book", "rain", "key", "worm",
-                            "chimney", "coin", "dog", "starfish", "cupcake"]
+        self.__word_list = word_list
+        # self.__word_list = ['''"skateboard", "book", "rain", ,"key", "worm", "chimney", "coin", "dog", "starfish", "cupcake"''']
 
     def generate_word(self):
         """Selects a random word to be used for gameplay
