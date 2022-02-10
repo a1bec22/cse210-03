@@ -1,3 +1,6 @@
+"""This class contains the display of each stage of the jumper"""
+
+
 class Display:
 
     def __init__(self):

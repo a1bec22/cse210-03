@@ -1,5 +1,5 @@
 import random
-from word_list import word_list
+from game.word_list import word_list
 
 
 class WordGen:

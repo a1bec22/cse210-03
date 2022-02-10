@@ -1,6 +1,6 @@
-from word_gen import WordGen
-from player import Player
-from display import Display
+from game.word_gen import WordGen
+from game.player import Player
+from game.display import Display
 
 
 class Conductor:
