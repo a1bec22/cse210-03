@@ -2,6 +2,7 @@ from word_gen import WordGen
 from player import Player
 from display import Display
 
+
 class Conductor:
 
     def __init__(self):
@@ -12,7 +13,7 @@ class Conductor:
         self.__guessed = guessed
         self.__guessed_letters = []
         self.__guessed_words = []
-        self.__tries = 4        
+        self.__tries = 4
 
     def start(self):
         """
@@ -21,14 +22,14 @@ class Conductor:
         """
         gen = WordGen()
         self.__word = gen.generate_word()
-        self.__word_completion = "_" * len(self.__word)
+        self.__word_completion = "^" * len(self.__word)
         self.__play = True
         self.__guessed = False
 
         display = Display()
         if self.__play:
-            print(self.__word_completion)
             print(display.display_parachute(self.__tries))
+            print(self.__word_completion)
             self.get_guess()
             self.do_guess_logic()
         self.game_end()
@@ -68,7 +69,7 @@ class Conductor:
                     for index in indices:
                         self.__word_as_list[index] = self.__guess
                     self.__word_completion = "".join(self.__word_as_list)
-                    if "_" not in self.__word_completion:
+                    if "^" not in self.__word_completion:
                         self.__guessed = True
             elif len(self.__guess) == len(self.__word) and self.__guess.isalpha():
                 if self.__guess in self.__guessed_words:
@@ -82,8 +83,10 @@ class Conductor:
                     self.__word_completion = self.__word
             else:
                 print("Not a valid guess.")
-            print(self.__word_completion)
             print(display.display_parachute(self.__tries))
+            print(self.__word_completion)
+            print()
+
             if self.__tries != 0 and self.__guessed != True:
                 self.__guess = player.guess_letter()
 
@@ -92,7 +95,7 @@ class Conductor:
         This method determines whether to display the win message, or loss message, based on the "guessed" status. Then, it asks player if a new round would be desired.
         Args: self (Conductor)
         """
-        
+
         if self.__guessed == True:
             print("Congrats, you guessed the word! You win!")
         else:

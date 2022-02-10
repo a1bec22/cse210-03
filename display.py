@@ -9,7 +9,7 @@ class Display:
                      X
                     /|\\
                     / \\
-                 ^^^^^^^^^^^        
+                         
             """,
             # Fourth Stage: lost the ropes of the parachute
             """   
@@ -17,7 +17,7 @@ class Display:
                      O
                     /|\\
                     / \\
-                 ^^^^^^^^^^^ 
+                  
             """,
             # Third Stage: Lost the parachute.
             """
@@ -26,7 +26,7 @@ class Display:
                      O
                     /|\\
                     / \\
-                 ^^^^^^^^^^^ 
+                  
             """,
             # second stage, lost the top of the parachute
             """
@@ -36,7 +36,7 @@ class Display:
                       O
                      /|\\
                      / \\
-                  ^^^^^^^^^^^ 
+                   
             """,
             # Initial stage
             """
@@ -47,7 +47,7 @@ class Display:
                       O
                      /|\\
                      / \\
-                  ^^^^^^^^^^^ 
+                   
             """
         ]
         return stages[tries]
